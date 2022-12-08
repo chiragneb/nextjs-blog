@@ -1,9 +1,11 @@
-// next.config.js
+
 const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = {
-  assetPrefix: isProd ? '/nextjs-blog/' : '',
+const nextConfig = {
+  assetPrefix: isProd ? '/your-github-repo-name/' : '',
   images: {
     unoptimized: true,
   },
 }
+
+module.exports = nextConfig
