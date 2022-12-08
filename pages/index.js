@@ -23,10 +23,15 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Working on my First nextJS project</p>
+        
         <p>
         Hello, my name is Chirag. I am currently learning React and NextJS and am seeking remote work opportunities with companies and organizations that use these technologies in production. As a junior developer, I am eager to apply my skills and knowledge to help these organizations succeed.
         </p>
+      
+        <a href="mailto:chiragneb@gmail.com" className={`${utilStyles.linkclass}`}>Contact me</a>
+        <br />
+        <a href="https://github.com/chiragneb" className={`${utilStyles.linkclass}`}>My GitHub profile</a>
+        <br />
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Added Posts </h2>
