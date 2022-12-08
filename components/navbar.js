@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/*import { useState } from 'react';
 
 export default function Navbar(){
     const [style,setStyle]= useState("navbar1")
@@ -28,4 +28,4 @@ return(
 
    </div></div>
 )
-}
+} */
