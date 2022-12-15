@@ -1,6 +1,6 @@
 ---
-title: 'Major new features of Rust Programming Language (explained by GPT)'
-date: '2022-12-04'
+title: 'Major new features of Rust Programming Language'
+date: '2022-12-10'
 ---
 
 Some of the major new features of the Rust programming language include:

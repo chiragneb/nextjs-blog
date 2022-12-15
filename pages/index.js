@@ -28,13 +28,14 @@ export default function Home({ allPostsData }) {
         Hello, my name is Chirag. I am currently learning React and NextJS and am seeking remote work opportunities with companies and organizations that use these technologies in production. As a junior developer, I am eager to apply my skills and knowledge to help these organizations succeed.
         </p>
       
-        <a href="mailto:chiragneb@gmail.com" className={`${utilStyles.linkclass}`}>Contact me</a>
+        <a href="mailto:chiragneb@gmail.com" className={`${utilStyles.linkclass}`}> Mail 📭 </a>
         <br />
-        <a href="https://github.com/chiragneb" className={`${utilStyles.linkclass}`}>My GitHub profile</a>
+        <a href="https://github.com/chiragneb" className={`${utilStyles.linkclass}`}> Github 💻 </a>
         <br />
       </section>
+      <br />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Added Posts </h2>
+        <h2 className={utilStyles.headingLg}> Blog Entries 📜</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
