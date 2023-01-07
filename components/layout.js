@@ -5,45 +5,39 @@ import { useTheme } from 'next-themes'
 
 
 
-const name = 'CHIRAG NEB 🏗️'
+const name = 'CHIRAG NEB\'s Blog'
 export const siteTitle = 'Chirag Neb\'s Blog'
 
 export default function Layout({ children, home }) {
   const {theme, setTheme} = useTheme()
   return (
-    <div className='container md:container md:mx-auto mt-10 mb-10'>
+    <div className='container md:container mt-10 mb-10'>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="chirag neb's Blog"
           content="my blog..."
         />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header>
         {home ? (
           <>
-          <div className='flex items-center mb-20'>
-            <Image
+           <div className='flex'>
+           <Image
               priority
-              src="/images/profile.png"
-              className='rounded-full mr-20 ml-20'
+              src="/images/profile.jpg"
+              className='rounded-full mr-10'
               height={90}
               width={90}
               alt={name}
             />
-            <h1 className='font-bold text-4xl mr-10'>{name}</h1>
+            <h1 className='font-bold text-4xl mr-10 mt-10'>{name}</h1>
             <button
+            className='ml-20'
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
              〈🌗〉
             </button>
+            
             </div>
           </>
         ) : (
