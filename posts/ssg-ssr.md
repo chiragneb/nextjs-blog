@@ -3,9 +3,7 @@ title: 'This is just a Sample Post for my nextJs blog'
 date: '2022-12-01'
 ---
 
----
-
-_**As a new JavaScript developer**_, I have recently had the opportunity to
+**As a new JavaScript developer**, I have recently had the opportunity to
 learn and understand the core concepts of this powerful and versatile
 programming language. In this essay, I will describe my experiences and insights
 as I have explored the key features and capabilities of JavaScript, and how
