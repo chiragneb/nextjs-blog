@@ -5,13 +5,13 @@ import { useTheme } from 'next-themes'
 
 
 
-const name = 'CHIRAG NEB\'s Blog'
+const name = 'CHIRAG NEB'
 export const siteTitle = 'Chirag Neb\'s Blog'
 
 export default function Layout({ children, home }) {
   const {theme, setTheme} = useTheme()
   return (
-    <div className='container md:container mt-10 mb-10'>
+    <div className='container md:container mt-10 mb-10 md:mr-5'>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -27,17 +27,15 @@ export default function Layout({ children, home }) {
               priority
               src="/images/profile.jpg"
               className='rounded-full mr-10'
-              height={90}
-              width={90}
+              height={80}
+              width={100}
               alt={name}
             />
             <h1 className='font-bold text-4xl mr-10 mt-10'>{name}</h1>
             <button
-            className='ml-20'
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             〈🌗〉
+             ☀️
             </button>
-            
             </div>
           </>
         ) : (
@@ -47,7 +45,7 @@ export default function Layout({ children, home }) {
               <Image
                 priority
                 src="/images/profile.png"
-                className='rounded-full mr-20'
+                className='rounded-full mr-16'
                 height={45}
                 width={45}
                 alt={name}
@@ -59,8 +57,9 @@ export default function Layout({ children, home }) {
               </Link>
             </h2>
             <button
+             className='ml-18'
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             〈🌗〉
+             ☀️
             </button>
             </div>
           </>

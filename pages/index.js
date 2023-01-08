@@ -24,12 +24,12 @@ export default function Home({ allPostsData }) {
       
       <section className='mt-10'> 
         <p className='mb-5' > 👋🏼 - Hello World!  <br/> <br/> <a href="mailto:chiragneb@gmail.com"> 📭 - Click to send me a Mail </a> <br/><br/>
-        <a href="https://github.com/chiragneb"> 〈Click for my Github〉🧑🏽‍💻 </a> </p>
+        <a href="https://github.com/chiragneb"> 🏗️ - Click for my Github </a></p>
       </section>
       <br />
 
       <section>
-        <h2 className='font-bold mb-5'> Blog Entries 📜</h2>
+        <h2 className='font-bold mb-5'> 📜 Blog Entries </h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (  
             <li className= "underline decoration-dotted my-4" key={id}>
