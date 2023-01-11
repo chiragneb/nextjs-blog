@@ -31,8 +31,8 @@ export default function Post({ postData }) {
           <Head>
             <title className='underline'>{postData.title}</title>
           </Head>
-        <article className='text-left md:text-left'>
-        <h1 className='underline font-bold text-2xl mb-4 mt-4'>{postData.title}</h1>
+        <article>
+        <h1 className='font-bold text-2xl mt-10'>{postData.title}</h1>
         <div className='ml-4 mb-4'>
           <Date dateString={postData.date} />
         </div>

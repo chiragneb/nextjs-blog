@@ -5,13 +5,14 @@ import { useTheme } from 'next-themes'
 
 
 
+
 const name = 'CHIRAG NEB'
 export const siteTitle = 'Chirag Neb\'s Blog'
 
 export default function Layout({ children, home }) {
   const {theme, setTheme} = useTheme()
   return (
-    <div className='container md:container mt-10 mb-10 md:mr-5'>
+    <div className='ml-10 mt-10 mr-10'>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -22,25 +23,25 @@ export default function Layout({ children, home }) {
       <header>
         {home ? (
           <>
-           <div className='flex'>
+           <div>
            <Image
               priority
               src="/images/profile.jpg"
-              className='rounded-full mr-10'
               height={80}
               width={100}
               alt={name}
             />
-            <h1 className='font-bold text-4xl mr-10 mt-10'>{name}</h1>
+            <h1 className="mb-10">{name}</h1>
             <button
+             className="mb-10"
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             ☀️
+             🌗 [dark/light]
             </button>
             </div>
           </>
         ) : (
           <>
-          <div className='flex items-center mb-10'>
+          <div>
             <Link href="/">
               <Image
                 priority
@@ -51,15 +52,15 @@ export default function Layout({ children, home }) {
                 alt={name}
               />
             </Link>
-            <h2 className='font-bold mr-10 text-2xl'>
+            <h2 className='mt-4'>
               <Link href="/">
                 {name}
               </Link>
             </h2>
             <button
-             className='ml-18'
+             className='mt-10'
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             ☀️
+             🌗 [dark/light]
             </button>
             </div>
           </>
@@ -67,7 +68,7 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className='mt-4 mb-4 underline'>
+        <div className='mt-10'>
           <Link href="/">← Back to home</Link>
         </div>
       )}
