@@ -18,14 +18,14 @@ export default function Home({ allPostsData }) {
   
   return (
     <>
+    <div className='mr-16 ml-16 md:mr-4 md:ml-4'>
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
 
       <section>
-        <p> 👋🏼 - Hello World!  <br /> <br /> <a href="mailto:chiragneb@gmail.com"> 📭 - Click to send me a Mail </a> <br /><br />
-          <a href="https://github.com/chiragneb"> 🏗️ - Click for my Github </a></p>
+        <p> 👋🏼 - Hello World! | <a href="mailto:chiragneb@gmail.com"> 📭 - Click to send me a Mail </a> | <a href="https://github.com/chiragneb"> 🏗️ - Click for my Github </a></p>
       </section>
       <br />
 
@@ -34,17 +34,19 @@ export default function Home({ allPostsData }) {
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link className='italic' href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small>
+              <small className='py-4'>
                 <Date dateString={date} />
               </small>
             </li>
           ))}
         </ul>
       </section>
+      <footer className='ml-10 mt-10 mb-10 text-xs'>© 2023 builtwith nextJS and Tailwind ☮</footer>
     </Layout>
-    <footer className='ml-10 mt-10 mb-10'>© 2023</footer>
+    </div>
+    
     </>
   );
 }

@@ -12,7 +12,8 @@ export const siteTitle = 'Chirag Neb\'s Blog'
 export default function Layout({ children, home }) {
   const {theme, setTheme} = useTheme()
   return (
-    <div className='ml-10 mt-10 mr-10'>
+    <div className='grid items-center justify-center h-screen'>
+    
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -23,44 +24,40 @@ export default function Layout({ children, home }) {
       <header>
         {home ? (
           <>
-           <div>
+           <div className='flex items-center pb-10'>
            <Image
               priority
               src="/images/profile.jpg"
+              className='shadow-lg rounded-full max-w-full h-auto align-middle border-none'
               height={80}
               width={100}
               alt={name}
             />
-            <h1 className="mb-10">{name}</h1>
+            <h1 className="mb-10 pl-10">{name}</h1>
             <button
-             className="mb-10"
+             className="mb-10 pl-10"
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             🌗 [dark/light]
+             [toggle]
             </button>
             </div>
           </>
         ) : (
           <>
-          <div>
+          <div className='flex items-center pb-10'>
             <Link href="/">
               <Image
                 priority
                 src="/images/profile.png"
-                className='rounded-full mr-16'
-                height={45}
-                width={45}
+                className='max-w-full h-auto rounded-lg mr-10'
+                width={40}
+                height= {40}
                 alt={name}
               />
             </Link>
-            <h2 className='mt-4'>
-              <Link href="/">
-                {name}
-              </Link>
-            </h2>
             <button
-             className='mt-10'
+             className='mt-10 pl-10'
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             🌗 [dark/light]
+             [toggle]
             </button>
             </div>
           </>
