@@ -23,12 +23,16 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
       <section>
-        <p> 👋🏼 - Hello World! | <a href="mailto:chiragneb@gmail.com"> 📭 - Click to send me a Mail </a> | <a href="https://github.com/chiragneb"> 🏗️ - Click for my Github </a></p>
+        <p className='mb-12'><span className='mx-4'>👋🏼 - Hello World!</span>|<span className='mx-4'> <a href="mailto:chiragneb@gmail.com"> 📭  Mail ↗ </a></span>|<span className='mx-4'><a href="https://github.com/chiragneb"> 🏗️ - Github ↗ </a></span></p>
+        <h1 className='mt-16 mb-4'> 🏛️ Projects </h1>
+        <ol className='my-2'>
+          <li className='my-2'><a href='https://nextpricetracker.vercel.app'>CryptoCurrency Price tracking App built with Nextjs & TailwindCSS ↗</a></li>
+          <li className='my-2'><a href='https://moviesearch-omdb.vercel.app/'>Movie Search APP built with React ↗</a></li>
+          <li className='my-2'><a href='https://fiatconverter.vercel.app/'>Currency Coverter Built with SvelteKit and TailwindCSS ↗ </a></li>
+        </ol>
       </section>
       <br />
-
       <section>
         <h2 className='mt-4 mb-6'> 📜 Blog Entries </h2>
         <ul>

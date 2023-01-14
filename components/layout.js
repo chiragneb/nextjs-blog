@@ -13,7 +13,6 @@ export default function Layout({ children, home }) {
   const {theme, setTheme} = useTheme()
   return (
     <div className='grid items-center justify-center h-screen'>
-    
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,7 +23,7 @@ export default function Layout({ children, home }) {
       <header>
         {home ? (
           <>
-           <div className='flex items-center pb-10'>
+           <div className='flex items-center mr-4 mb-10 mt-10'>
            <Image
               priority
               src="/images/profile.jpg"
@@ -33,31 +32,22 @@ export default function Layout({ children, home }) {
               width={100}
               alt={name}
             />
-            <h1 className="mb-10 pl-10">{name}</h1>
+            <h1 className="mb-10 mr-10 pl-10">{name}</h1>
             <button
-             className="mb-10 pl-10"
+             className="mb-10 mr-10"
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
              [toggle]
             </button>
             </div>
+
           </>
         ) : (
           <>
           <div className='flex items-center pb-10'>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.png"
-                className='max-w-full h-auto rounded-lg mr-10'
-                width={40}
-                height= {40}
-                alt={name}
-              />
-            </Link>
             <button
-             className='mt-10 pl-10'
+             className='mt-10'
              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
-             [toggle]
+             [toggle dark]
             </button>
             </div>
           </>
@@ -67,8 +57,10 @@ export default function Layout({ children, home }) {
       {!home && (
         <div className='mt-10'>
           <Link href="/">← Back to home</Link>
+          <footer className='ml-10 mt-10 mb-10 text-xs'>© 2023 builtwith nextJS and Tailwind ☮</footer>
         </div>
       )}
     </div>
+    
   )
 }
