@@ -24,7 +24,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <p className='mb-12'><span className='mx-4'>👋🏼 - Hello World!</span>|<span className='mx-4'> <a href="mailto:chiragneb@gmail.com"> 📭  Mail ↗ </a></span>|<span className='mx-4'><a href="https://github.com/chiragneb"> 🏗️ - Github ↗ </a></span></p>
+        <p className='mb-12'><span className='mx-4'>👋🏼 - Hello World!</span>|<span className='mx-4'> <a href="mailto:chiragneb@gmail.com"> 📭  Mail ↗ </a></span>|<span className='mx-4'><a href="https://github.com/chiragneb"> 🏗️ - Github ↗ </a></span>|<span className='mx-4'><Link href='/repos'> Repository List ↗ </Link></span></p>
         <h1 className='mt-16 mb-4'> 🏛️ Projects </h1>
         <ol className='my-2'>
           <li className='my-2'><a href='https://nextpricetracker.vercel.app'>CryptoCurrency Price tracking App built with Nextjs & TailwindCSS ↗</a></li>
