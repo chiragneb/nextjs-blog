@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section>
         <p className='mb-12'><span className='mx-4'>👋🏼 - Hello World!</span>|<span className='mx-4'> <a href="mailto:chiragneb@gmail.com"> 📭  Mail ↗ </a></span>|<span className='mx-4'><a href="https://github.com/chiragneb"> 🏗️ - Github ↗ </a></span>|<span className='mx-4'><Link href='/repos'> Repository List ↗ </Link></span></p>
-        <h1 className='mt-16 mb-4'> 🏛️ Projects </h1>
+        <h1 className='mt-10 mb-4'> 🏛️ Projects </h1>
         <ol className='my-2'>
           <li className='my-2'><a href='https://nextpricetracker.vercel.app'>CryptoCurrency Price tracking App built with Nextjs & TailwindCSS ↗</a></li>
           <li className='my-2'><a href='https://moviesearch-omdb.vercel.app/'>Movie Search APP built with React ↗</a></li>
@@ -34,13 +34,13 @@ export default function Home({ allPostsData }) {
       </section>
       <br />
       <section>
-        <h2 className='mt-4 mb-6'> 📜 Blog Entries </h2>
+        <h2 className='mt-4 mb-4'> 📜 Blog Entries </h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link className='italic' href={`/posts/${id}`}>{title}</Link>
+            <li className='mb-4' key={id}>
+              <Link className='bold' href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small className='py-4'>
+              <small>
                 <Date dateString={date} />
               </small>
             </li>
